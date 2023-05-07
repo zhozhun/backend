@@ -1,40 +1,34 @@
+import java.util.List;
 import java.util.ArrayList;
-@Service
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class Bodega {
-	
-//	- arreglo
-	
-	private ArrayList<Producto> productos;
-	
-//	- constructor
 
-	public Bodega() {
-		productos = new ArrayList<Producto>();
-	}
-	
-//	- métodos
+    private List<Producto> productos;
 
-	public void agregarProducto(Producto producto) {
-		productos.add(producto);
-	}
+    public Bodega() {
+        this.productos = new ArrayList<>();
+    }
 
-	public void eliminarProducto(Producto producto) {
-		productos.remove(producto);
-	}
+    public void agregarProducto(Producto producto) {
+        productos.add(producto);
+    }
 
-	public Producto buscarProducto(String nombre) {
-		for (Producto producto : productos) {
-			if (producto.getNombre().equals(nombre)) {
-				return producto;
-			}
-		}
-		return null;
-	}
+    public void mostrarProductos() {
+        System.out.println("Productos en bodega:");
+        for (Producto producto : productos) {
+            System.out.println(producto.getNombre() + " - Stock: " + producto.getStock());
+        }
+    }
 
-	public void mostrarProductos() {
-		System.out.println("Lista de productos:");
-		for (Producto producto : productos) {
-			System.out.println(producto.getNombre() + " - " + producto.getStock());
-		}
-	}
+    public Producto buscarProducto(String nombre) {
+        for (Producto producto : productos) {
+            if (producto.getNombre().equals(nombre)) {
+                return producto;
+            }
+        }
+        return null;
+    }
 }
