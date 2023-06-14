@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>>>>>>> 416f483b423c1a90e356fbdd9a338ab40b72b688
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.1.0</version>
+<<<<<<< HEAD
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bolsadeideas.springboot.app</groupId>
+=======
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.bodega.app</groupId>
+>>>>>>> 416f483b423c1a90e356fbdd9a338ab40b72b688
 	<artifactId>bodega</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>bodega</name>
@@ -31,12 +42,32 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
+<<<<<<< HEAD
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+=======
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>javax.persistence-api</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+
+>>>>>>> 416f483b423c1a90e356fbdd9a338ab40b72b688
 	</dependencies>
 
 	<build>

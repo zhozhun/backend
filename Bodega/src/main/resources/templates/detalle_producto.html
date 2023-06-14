@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle Producto</title>
+</head>
+<body>
+    <h1>Detalle Producto</h1>
+    <div th:if="${error}">
+        <p th:text="${error}"></p>
+    </div>
+    <div th:if="${producto}">
+        <p>Nombre: <span th:text="${producto.nombre}"></span></p>
+        <p>Stock: <span th:text="${producto.stock}"></span></p>
+        <hr>
+        <h2>Actualizar Stock</h2>
+        <form action="/aumentarStock/${producto.id}" method="post">
+            <label for="cantidad">Cantidad a agregar:</label>
+            <input type="number" id="cantidad" name="cantidad"><br>
+            <button type="submit">Aumentar Stock</button>
+        </form>
+        <form action="/disminuirStock/${producto.id}" method="post">
+            <label for="cantidad">Cantidad a disminuir:</label>
+            <input type="number" id="cantidad" name="cantidad"><br>
+            <button type="submit">Disminuir Stock</button>
+        </form>
+    </div>
+    <hr>
+    <a href="/">Volver al Inventario</a>
+</body>
+</html>
